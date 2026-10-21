@@ -19,10 +19,23 @@ char [] studentAnswers = new char[20];
 System.out.println("Please Answer A, B, C, or D to the following questions");
 //for loop to allow user to input answers
 for (int i = 0; i < studentAnswers.length; i++){
-    
+    boolean invalid = true;
+    char choice = ' ';
+
+    while (invalid){
     System.out.print("Question " + (i+1) + ":");
-    answer = keyboard.nextLine();
-    answer.toUpperCase();//ensures that program will accept both lower case and capital letters
+    answer = keyboard.nextLine().toUpperCase();//ensures that program will accept both lower case and capital letters
+
+   if (answer.length() == 1 && answer.equals("A")|| answer.equals("B")|| answer.equals("C")|| answer.equals("D")) {
+    choice = answer.charAt(0);
+    invalid = false;
+   }
+   else{
+    System.out.println("Invalid Input. Please enter A, B, C, or D");
+    }
+  
+      studentAnswers[i] = choice;
+  }
 }
 
 //for loop to compare indexes of each Array 
@@ -33,23 +46,26 @@ else
     incorrectAmount++;//counts the incorrect answers
 }
 
+System.out.println();
 System.out.println("Correct Answers: " + correctAmount);
 System.out.println("Incorrect Answers: " + incorrectAmount);
 
 //if else statement to determine if student passed or failed
 if (correctAmount >= 15)
-   System.out.println("Result: Pass");
+   System.out.println("Result: PASS");
 else   
-System.out.println("Result: Fail");
+System.out.println("Result: FAIL");
 
+System.out.println();
 System.out.println("Questions answered incorrectly: ");
 
 //for loop to determine which questions were answered incorrectly
 for (int i = 0; i <20; i++){
-    while(correctAnswers[i] != studentAnswers[i])
+    if(correctAnswers[i] != studentAnswers[i]){
     
-        System.out.println("Question " + (i+1) + " is incorrect");
+        System.out.print((i+1) + " ");
     }
+}
 
 keyboard.close();
 
