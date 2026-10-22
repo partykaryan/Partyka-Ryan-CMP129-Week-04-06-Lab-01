@@ -2,16 +2,16 @@
 
 ## Student Information
 
-- Student name:
-- Week:
-- Lab:
-- Date:
+- Student name: Ryan Partyka 
+- Week: 06
+- Lab: 01
+- Date: 10/13/2026
 
 ## AI Use
 
 Did you use an AI tool for this lab?
 
-- [ ] Yes
+- [x] Yes
 - [ ] No
 
 If yes, complete the sections below. If no, write “No AI tool was used” under Summary.
@@ -20,19 +20,19 @@ If yes, complete the sections below. If no, write “No AI tool was used” unde
 
 Examples: GitHub Copilot, ChatGPT, Microsoft Copilot, or another tool.
 
-Tool:
+Tool: GitHub Copilot 
 
 ## Assistance Requested
 
 Describe what you asked the AI tool to help you understand or troubleshoot.
 
-Response:
+Response: GitHub was helpful with structuring the input validation loops to ensure that the program would not accept invalid inputs from the user.
 
 ## How I Used the Assistance
 
 Explain which suggestions you used, changed, or rejected. Do not paste an entire AI conversation.
 
-Response:
+Response: I used the suggestion of 
 
 ## Testing and Verification
 

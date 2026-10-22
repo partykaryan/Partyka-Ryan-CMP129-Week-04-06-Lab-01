@@ -17,7 +17,7 @@ char [] studentAnswers = new char[20];
 
 
 System.out.println("Please Answer A, B, C, or D to the following questions");
-//for loop to allow user to input answers
+//for loop to allow user to input answers and check for input validation
 for (int i = 0; i < studentAnswers.length; i++){
     boolean invalid = true;
     char choice = ' ';

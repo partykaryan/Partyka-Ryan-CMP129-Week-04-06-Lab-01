@@ -12,10 +12,11 @@ public class Lottery {
     for (int i = 0; i < lottery.length; i++){
         lottery[i] = random.nextInt(10);
     }
-
+    //user array to store user entered values
     int [] user = new int[5];
     
     System.out.println("Please enter your 5 lottery numbers (0-9)");
+    //for loop to validate user input 
     for (int i = 0; i < user.length; i++){
        boolean invalid = true;
        int number = 0;
@@ -33,7 +34,6 @@ public class Lottery {
       }
     } 
   }
-     
     //for loop to compare array elements and count matching numbers
     int matchingNumbers = 0;
     for (int i = 0; i < 5; i++){
@@ -41,7 +41,6 @@ public class Lottery {
            matchingNumbers++;
         }
     }
-    
     System.out.println();
     //for loop displaying lottery array elements
     System.out.print("Lottery numbers: ");
@@ -59,10 +58,13 @@ public class Lottery {
     System.out.println();
     //if statement to determine whether or not user matched all 5 digits
     System.out.println("Matching digits: " + matchingNumbers);
+    System.out.println();
     if (matchingNumbers == 5){
         System.out.println("Congratulations! You are the grand-prize winner!");
     }
-    
+    else{
+        System.out.println("Sorry! Try again to win the grand-prize!");
+    }
     keyboard.close();
     
     }//end of main method
